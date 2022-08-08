@@ -4,7 +4,7 @@ pipeline{
     }
     agent any
     stages{
-        stage('clone the git repo'){
+        stage('clone the source-code git repo'){
             steps{
                 dir('source-code'){
                     git branch: branch,
@@ -14,6 +14,17 @@ pipeline{
 
                 }
             }
+        }
+
+        stage('clone the kubernetes-app git repo '){
+            steps{
+                dir('kubernetes-app'){
+                    git branch: branch
+                    credentialsId: 'hamza.sajjad'
+                    url: 'git@github.com:hamzamaan/Kubernetes_app.git'
+                }
+            }
+
         }
     }
 }
