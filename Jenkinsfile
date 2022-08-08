@@ -19,8 +19,8 @@ pipeline{
         stage('clone the kubernetes-app git repo '){
             steps{
                 dir('kubernetes-app'){
-                    git branch: branch
-                    credentialsId: 'hamza.sajjad'
+                    git branch: branch,
+                    credentialsId: 'hamza.sajjad',
                     url: 'git@github.com:hamzamaan/Kubernetes_app.git'
                 }
             }
