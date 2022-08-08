@@ -26,5 +26,20 @@ pipeline{
             }
 
         }
+
+           stage('Code Analysis - sonarqube-saelor') {
+            steps {
+                script{
+                    env.sonarHome= tool name: 'sonarqube-saelor', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+                }
+                withSonarQubeEnv('sonarqube-saelor') {
+                    sh """
+                      ${sonarHome}/bin/sonar-scanner \
+                      -Dsonar.projectKey=saelor-project  \
+                      -Dsonar.sources=. \
+                    """
+                }
+            }
+        }
     }
 }
