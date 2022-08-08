@@ -1,0 +1,86 @@
+{
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Python Source Analyzer",
+          "version": "1.0.0-scan",
+          "fullName": "Python Source Analyzer"
+        }
+      },
+      "conversion": {
+        "tool": {
+          "driver": {
+            "name": "@ShiftLeft/sast-scan"
+          }
+        },
+        "invocation": {
+          "arguments": [
+            "-r",
+            "-a",
+            "vuln",
+            "-n",
+            "3",
+            "-s",
+            "B101,B102,B105,B307,B308,B310,B322,B404,B601,B602,B603,B604,B605,B701,B702,B703",
+            "-iii",
+            "-ll",
+            "-o",
+            "/app/reports/source-python-report.json",
+            "-f",
+            "json",
+            "-x",
+            ".git,.svn,.mvn,.idea,.github,.hg,dist,obj,backup,docs,tests,test,test-packages,tmp,report,reports,node_modules,.terraform,.serverless,venv,.virtualenv,vendor,bower_components,.vscode,e2e,.pytest_cache,__pycache__,.storybook,.venv,.tox,examples,tutorials,samples,migrations,db_migrations,unittests,unittests_legacy,stubs,cypress,mock,mocks",
+            "/app"
+          ],
+          "executionSuccessful": true,
+          "commandLine": "-r -a vuln -n 3 -s B101,B102,B105,B307,B308,B310,B322,B404,B601,B602,B603,B604,B605,B701,B702,B703 -iii -ll -o /app/reports/source-python-report.json -f json -x .git,.svn,.mvn,.idea,.github,.hg,dist,obj,backup,docs,tests,test,test-packages,tmp,report,reports,node_modules,.terraform,.serverless,venv,.virtualenv,vendor,bower_components,.vscode,e2e,.pytest_cache,__pycache__,.storybook,.venv,.tox,examples,tutorials,samples,migrations,db_migrations,unittests,unittests_legacy,stubs,cypress,mock,mocks /app",
+          "endTimeUtc": "2022-04-18T09:02:49Z",
+          "workingDirectory": {
+            "uri": "file:///home/wahaj/Desktop/flask_kubernetes"
+          }
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "endTimeUtc": "2022-04-18T09:02:49Z",
+          "workingDirectory": {
+            "uri": "file:///home/wahaj/Desktop/flask_kubernetes"
+          }
+        }
+      ],
+      "properties": {
+        "metrics": {
+          "total": 0,
+          "critical": 0,
+          "high": 0,
+          "medium": 0,
+          "low": 0
+        }
+      },
+      "results": [],
+      "automationDetails": {
+        "description": {
+          "text": "Static Analysis Security Test results using @ShiftLeft/sast-scan"
+        },
+        "guid": "18f87d1c-00f9-4e86-9670-ae19bb563338"
+      },
+      "versionControlProvenance": [
+        {
+          "branch": "dev",
+          "repositoryUri": "https://github.com/wahaj123/flask_kubernetes",
+          "revisionId": "b789bf84887e23050f976d20950e48ec15c48842"
+        }
+      ]
+    }
+  ],
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "inlineExternalProperties": [
+    {
+      "guid": "18f87d1c-00f9-4e86-9670-ae19bb563338",
+      "runGuid": "90418c29-c35f-4ab5-9668-8729879a6bf1"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="wahaj" name="pytest" skipped="0" tests="2" time="25.057" timestamp="2021-06-17T17:00:31.006960"><testcase classname="test.api_test" file="test/api_test.py" line="3" name="test_get_locations" time="4.368"><system-out>&lt;Response [200]&gt;
+</system-out></testcase><testcase classname="test.functional_test" file="test/functional_test.py" line="24" name="test_case" time="20.378"><system-out>Test completed
+</system-out></testcase></testsuite></testsuites>

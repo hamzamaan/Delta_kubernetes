@@ -1,0 +1,1499 @@
+{
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Python Security Analysis",
+          "rules": [
+            {
+              "id": "taint-open-redirect",
+              "help": {
+                "text": "A web application accepts a user-controlled input that specifies a link to an external site, and uses that link in a Redirect. This simplifies phishing attacks.\nAn http parameter may contain a URL value and could cause the web application to redirect the request to the specified URL. By modifying the URL value to a malicious site, an attacker may successfully launch a phishing scam and steal user credentials. Because the server name in the modified link is identical to the original site, phishing attempts have a more trustworthy appearance.",
+                "markdown": "A web application accepts a user-controlled input that specifies a link to an external site, and uses that link in a Redirect. This simplifies phishing attacks.\nAn http parameter may contain a URL value and could cause the web application to redirect the request to the specified URL. By modifying the URL value to a malicious site, an attacker may successfully launch a phishing scam and steal user credentials. Because the server name in the modified link is identical to the original site, phishing attempts have a more trustworthy appearance."
+              },
+              "name": "Open Redirect",
+              "properties": {
+                "tags": [
+                  "Scan"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "fullDescription": {
+                "text": "A web application accepts a user-controlled input that specifies a link to an external site, and uses that link in a Redirect. This simplifies phishing attacks."
+              },
+              "helpUri": "https://cwe.mitre.org/data/definitions/601.html",
+              "shortDescription": {
+                "text": "URL Redirection to Untrusted Site ('Open Redirect')."
+              }
+            },
+            {
+              "id": "taint-basic-xss",
+              "help": {
+                "text": "The software receives input from an upstream component, but it does not neutralize or incorrectly neutralizes special characters such as <, >, and & that could be interpreted as web-scripting elements when they are sent to a downstream component that processes web pages.\nThis may allow such characters to be treated as control characters, which are executed client-side in the context of the user's session. Although this can be classified as an injection problem, the more pertinent issue is the improper conversion of such special characters to respective context-appropriate entities before displaying them to the user.",
+                "markdown": "The software receives input from an upstream component, but it does not neutralize or incorrectly neutralizes special characters such as <, >, and & that could be interpreted as web-scripting elements when they are sent to a downstream component that processes web pages.\nThis may allow such characters to be treated as control characters, which are executed client-side in the context of the user's session. Although this can be classified as an injection problem, the more pertinent issue is the improper conversion of such special characters to respective context-appropriate entities before displaying them to the user."
+              },
+              "name": "Potential XSS",
+              "properties": {
+                "tags": [
+                  "Scan"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "fullDescription": {
+                "text": "The software receives input from an upstream component, but it does not neutralize or incorrectly neutralizes special characters such as <, >, and & that could be interpreted as web-scripting elements when they are sent to a downstream component that processes web pages."
+              },
+              "helpUri": "https://cwe.mitre.org/data/definitions/80.html",
+              "shortDescription": {
+                "text": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS)."
+              }
+            },
+            {
+              "id": "flask-misconfiguration-recommended",
+              "help": {
+                "text": "The product specifies permissions for a security-critical resource in a way that allows that resource to be read or modified by unintended actors.\nWhen a resource is given a permissions setting that provides access to a wider range of actors than required, it could lead to the exposure of sensitive information, or the modification of that resource by unintended parties. This is especially dangerous when the resource is related to program configuration, execution or sensitive user data.",
+                "markdown": "The product specifies permissions for a security-critical resource in a way that allows that resource to be read or modified by unintended actors.\nWhen a resource is given a permissions setting that provides access to a wider range of actors than required, it could lead to the exposure of sensitive information, or the modification of that resource by unintended parties. This is especially dangerous when the resource is related to program configuration, execution or sensitive user data."
+              },
+              "name": "Security Misconfiguration",
+              "properties": {
+                "tags": [
+                  "Scan"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "fullDescription": {
+                "text": "The product specifies permissions for a security-critical resource in a way that allows that resource to be read or modified by unintended actors."
+              },
+              "helpUri": "https://cwe.mitre.org/data/definitions/732.html",
+              "shortDescription": {
+                "text": "Incorrect Permission Assignment for Critical Resource."
+              }
+            },
+            {
+              "id": "flask-misconfiguration-controls",
+              "help": {
+                "text": "The product specifies permissions for a security-critical resource in a way that allows that resource to be read or modified by unintended actors.\nWhen a resource is given a permissions setting that provides access to a wider range of actors than required, it could lead to the exposure of sensitive information, or the modification of that resource by unintended parties. This is especially dangerous when the resource is related to program configuration, execution or sensitive user data.",
+                "markdown": "The product specifies permissions for a security-critical resource in a way that allows that resource to be read or modified by unintended actors.\nWhen a resource is given a permissions setting that provides access to a wider range of actors than required, it could lead to the exposure of sensitive information, or the modification of that resource by unintended parties. This is especially dangerous when the resource is related to program configuration, execution or sensitive user data."
+              },
+              "name": "Missing Security Controls",
+              "properties": {
+                "tags": [
+                  "Scan"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "The product specifies permissions for a security-critical resource in a way that allows that resource to be read or modified by unintended actors."
+              },
+              "helpUri": "https://cwe.mitre.org/data/definitions/732.html",
+              "shortDescription": {
+                "text": "Incorrect Permission Assignment for Critical Resource."
+              }
+            }
+          ],
+          "version": "1.0.0-scan",
+          "fullName": "Python Security Analysis"
+        }
+      },
+      "conversion": {
+        "tool": {
+          "driver": {
+            "name": "@ShiftLeft/sast-scan"
+          }
+        },
+        "invocation": {
+          "arguments": [
+            "-j",
+            "-a",
+            "e",
+            "-o",
+            "/app/reports/taint-python-report.json"
+          ],
+          "executionSuccessful": true,
+          "commandLine": "-j -a e -o /app/reports/taint-python-report.json",
+          "endTimeUtc": "2022-04-18T09:02:48Z",
+          "workingDirectory": {
+            "uri": "file:///home/wahaj/Desktop/flask_kubernetes"
+          }
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "endTimeUtc": "2022-04-18T09:02:48Z",
+          "workingDirectory": {
+            "uri": "file:///home/wahaj/Desktop/flask_kubernetes"
+          }
+        }
+      ],
+      "properties": {
+        "metrics": {
+          "total": 32,
+          "critical": 0,
+          "high": 3,
+          "medium": 19,
+          "low": 10
+        }
+      },
+      "results": [
+        {
+          "message": {
+            "markdown": "",
+            "text": "Data from `redirect_to in views.py:25` may be used in an open redirect via `views.py:37`."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "def check_message_box_space(redirect_to=None):\n"
+                  },
+                  "startLine": 25
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/plugin_example/conversations/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\ndef check_message_box_space(redirect_to=None):\n    \"\"\"Checks the message quota has been exceeded. If thats the case\n    it flashes a message and redirects back to some endpoint.\n"
+                  },
+                  "endLine": 27,
+                  "startLine": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "HIGH",
+            "issue_tags": {
+              "source_trigger_word": "Framework function URL parameter",
+              "source_label": "redirect_to",
+              "source_type": "Framework_Parameter",
+              "sink_trigger_word": "redirect(",
+              "sink_label": "~call_2 = ret_flask.redirect(redirect_to or url_for(conversations_bp.inbox))",
+              "sink_type": "Redirect"
+            }
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "e044b6ca62021a2a",
+            "scanTagsHash": "8a9227676badd488",
+            "scanFileHash": "fcc641a9fc7c1188"
+          },
+          "ruleId": "taint-open-redirect",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Possibility for Cross-site scripting (XSS) when the http data at `form in views.py:16` is returned to the user via `views.py:20` without sanitization."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "def show(id, form=None):\n"
+                  },
+                  "startLine": 16
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/product/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\ndef show(id, form=None):\n    product = Product.get_by_id(id)\n    if not form:\n"
+                  },
+                  "endLine": 18,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {
+              "source_trigger_word": "Framework function URL parameter",
+              "source_label": "form",
+              "source_type": "Framework_Parameter",
+              "sink_trigger_word": "render_template(",
+              "sink_label": "~call_3 = ret_flask.render_template(products/details.html, product=product, form=form)",
+              "sink_type": "ReturnedToUser"
+            }
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "fe143f7b7de4e909",
+            "scanTagsHash": "286b73ac26cf46e9",
+            "scanFileHash": "73380b4d90c319b7"
+          },
+          "ruleId": "taint-basic-xss",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Data from `views.py:42` may be used in an open redirect via `views.py:68`."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "    customer_ip_address = request.headers.get(\"X-Forwarded-For\", request.remote_addr)\n"
+                  },
+                  "startLine": 42
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/order/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "    payment_no = str(int(time.time())) + str(current_user.id)\n    customer_ip_address = request.headers.get(\"X-Forwarded-For\", request.remote_addr)\n    payment = OrderPayment.query.filter_by(order_id=order.id).first()\n    if payment:\n"
+                  },
+                  "endLine": 44,
+                  "startLine": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "HIGH",
+            "issue_tags": {
+              "source_trigger_word": "request.headers.get(",
+              "source_label": "~call_5 = ret_flask.request.headers.get(X-Forwarded-For, request.remote_addr)",
+              "source_type": "UserControlled_Meta",
+              "sink_trigger_word": "redirect(",
+              "sink_label": "~call_10 = ret_flask.redirect(current_app.config[PURCHASE_URI] + payment.order_string)",
+              "sink_type": "Redirect"
+            }
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "68c0efaf956aaf13",
+            "scanTagsHash": "46e2eb9df3540add",
+            "scanFileHash": "3d13e366d1226344"
+          },
+          "ruleId": "taint-open-redirect",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Data from `views.py:26` may be used in an open redirect via `views.py:28`."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "        redirect_url = request.args.get(\"next\") or url_for(\"public.home\")\n"
+                  },
+                  "startLine": 26
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/account/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "        login_user(form.user)\n        redirect_url = request.args.get(\"next\") or url_for(\"public.home\")\n        flash(\"You are log in.\", \"success\")\n        return redirect(redirect_url)\n"
+                  },
+                  "endLine": 28,
+                  "startLine": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "HIGH",
+            "issue_tags": {
+              "source_trigger_word": "request.args.get(",
+              "source_label": "redirect_url = request.args.get(next) or url_for(public.home)",
+              "source_type": "UserControlled_Parameter",
+              "sink_trigger_word": "redirect(",
+              "sink_label": "~call_4 = ret_flask.redirect(redirect_url)",
+              "sink_type": "Redirect"
+            }
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "090c947ea8462bb5",
+            "scanTagsHash": "13bd6bfd66f6956b",
+            "scanFileHash": "bd6d4572ca519ce6"
+          },
+          "ruleId": "taint-open-redirect",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `PREFERRED_URL_SCHEME` not set to the recommended value `https` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "from pluggy import HookimplMarker\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/plugin_example/conversations/__init__.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "from pluggy import HookimplMarker\nfrom flask import render_template\nfrom flask_login import current_user\n\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "9e7b6524fd74922a",
+            "scanFileHash": "af37647f2100af80"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `SESSION_COOKIE_SECURE` not set to the recommended value `True` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "from pluggy import HookimplMarker\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/plugin_example/conversations/__init__.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "from pluggy import HookimplMarker\nfrom flask import render_template\nfrom flask_login import current_user\n\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "9e7b6524fd74922a",
+            "scanFileHash": "af37647f2100af80"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Consider adding Flask-Security and Flask-Talisman security extensions to your Flask apps."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "from pluggy import HookimplMarker\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/plugin_example/conversations/__init__.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "from pluggy import HookimplMarker\nfrom flask import render_template\nfrom flask_login import current_user\n\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "LOW",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "9e7b6524fd74922a",
+            "scanFileHash": "af37647f2100af80"
+          },
+          "ruleId": "flask-misconfiguration-controls",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `PREFERRED_URL_SCHEME` not set to the recommended value `https` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/public/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n\"\"\"Public section, including homepage and signup.\"\"\"\nfrom flask import Blueprint, render_template, request, send_from_directory\nfrom pluggy import HookimplMarker\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "caf386d407b83573",
+            "scanFileHash": "885fedd8d481af10"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `SESSION_COOKIE_SECURE` not set to the recommended value `True` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/public/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n\"\"\"Public section, including homepage and signup.\"\"\"\nfrom flask import Blueprint, render_template, request, send_from_directory\nfrom pluggy import HookimplMarker\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "caf386d407b83573",
+            "scanFileHash": "885fedd8d481af10"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Consider adding Flask-Security and Flask-Talisman security extensions to your Flask apps."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/public/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n\"\"\"Public section, including homepage and signup.\"\"\"\nfrom flask import Blueprint, render_template, request, send_from_directory\nfrom pluggy import HookimplMarker\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "LOW",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "caf386d407b83573",
+            "scanFileHash": "885fedd8d481af10"
+          },
+          "ruleId": "flask-misconfiguration-controls",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `PREFERRED_URL_SCHEME` not set to the recommended value `https` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/product/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n\"\"\"Product views.\"\"\"\nfrom flask import Blueprint, render_template, request, jsonify\nfrom flask_login import login_required\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "caf386d407b83573",
+            "scanFileHash": "73380b4d90c319b7"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `SESSION_COOKIE_SECURE` not set to the recommended value `True` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/product/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n\"\"\"Product views.\"\"\"\nfrom flask import Blueprint, render_template, request, jsonify\nfrom flask_login import login_required\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "caf386d407b83573",
+            "scanFileHash": "73380b4d90c319b7"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Consider adding Flask-Security and Flask-Talisman security extensions to your Flask apps."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/product/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n\"\"\"Product views.\"\"\"\nfrom flask import Blueprint, render_template, request, jsonify\nfrom flask_login import login_required\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "LOW",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "caf386d407b83573",
+            "scanFileHash": "73380b4d90c319b7"
+          },
+          "ruleId": "flask-misconfiguration-controls",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `PREFERRED_URL_SCHEME` not set to the recommended value `https` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "import time\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/order/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "import time\nfrom datetime import datetime\n\nfrom flask import (\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "c29d6c8e0579c9a9",
+            "scanFileHash": "3d13e366d1226344"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `SESSION_COOKIE_SECURE` not set to the recommended value `True` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "import time\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/order/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "import time\nfrom datetime import datetime\n\nfrom flask import (\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "c29d6c8e0579c9a9",
+            "scanFileHash": "3d13e366d1226344"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Consider adding Flask-Security and Flask-Talisman security extensions to your Flask apps."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "import time\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/order/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "import time\nfrom datetime import datetime\n\nfrom flask import (\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "LOW",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "c29d6c8e0579c9a9",
+            "scanFileHash": "3d13e366d1226344"
+          },
+          "ruleId": "flask-misconfiguration-controls",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `PREFERRED_URL_SCHEME` not set to the recommended value `https` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "from flask import Blueprint\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/discount/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "from flask import Blueprint\nfrom pluggy import HookimplMarker\n\nfrom .models import *\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "3764824e0bb6ec38",
+            "scanFileHash": "a8d6834bf9fdefda"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `SESSION_COOKIE_SECURE` not set to the recommended value `True` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "from flask import Blueprint\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/discount/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "from flask import Blueprint\nfrom pluggy import HookimplMarker\n\nfrom .models import *\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "3764824e0bb6ec38",
+            "scanFileHash": "a8d6834bf9fdefda"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Consider adding Flask-Security and Flask-Talisman security extensions to your Flask apps."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "from flask import Blueprint\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/discount/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "from flask import Blueprint\nfrom pluggy import HookimplMarker\n\nfrom .models import *\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "LOW",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "3764824e0bb6ec38",
+            "scanFileHash": "a8d6834bf9fdefda"
+          },
+          "ruleId": "flask-misconfiguration-controls",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `PREFERRED_URL_SCHEME` not set to the recommended value `https` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "from datetime import datetime\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/dashboard/views/bp.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "from datetime import datetime\nfrom flask import Blueprint, render_template\nfrom flask_login import login_required\nfrom pluggy import HookimplMarker\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "a2a0d32cf165092f",
+            "scanFileHash": "cbe1df0b81de6d5a"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `SESSION_COOKIE_SECURE` not set to the recommended value `True` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "from datetime import datetime\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/dashboard/views/bp.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "from datetime import datetime\nfrom flask import Blueprint, render_template\nfrom flask_login import login_required\nfrom pluggy import HookimplMarker\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "a2a0d32cf165092f",
+            "scanFileHash": "cbe1df0b81de6d5a"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Consider adding Flask-Security and Flask-Talisman security extensions to your Flask apps."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "from datetime import datetime\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/dashboard/views/bp.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "from datetime import datetime\nfrom flask import Blueprint, render_template\nfrom flask_login import login_required\nfrom pluggy import HookimplMarker\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "LOW",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "a2a0d32cf165092f",
+            "scanFileHash": "cbe1df0b81de6d5a"
+          },
+          "ruleId": "flask-misconfiguration-controls",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `PREFERRED_URL_SCHEME` not set to the recommended value `https` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "from flask import Blueprint, render_template, request, redirect, url_for, jsonify, flash\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/checkout/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "from flask import Blueprint, render_template, request, redirect, url_for, jsonify, flash\nfrom flask_login import current_user, login_required\nfrom pluggy import HookimplMarker\n\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "fae1813c61b6c4fd",
+            "scanFileHash": "37c2dc1e3a4a2fac"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `SESSION_COOKIE_SECURE` not set to the recommended value `True` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "from flask import Blueprint, render_template, request, redirect, url_for, jsonify, flash\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/checkout/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "from flask import Blueprint, render_template, request, redirect, url_for, jsonify, flash\nfrom flask_login import current_user, login_required\nfrom pluggy import HookimplMarker\n\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "fae1813c61b6c4fd",
+            "scanFileHash": "37c2dc1e3a4a2fac"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Consider adding Flask-Security and Flask-Talisman security extensions to your Flask apps."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "from flask import Blueprint, render_template, request, redirect, url_for, jsonify, flash\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/checkout/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "from flask import Blueprint, render_template, request, redirect, url_for, jsonify, flash\nfrom flask_login import current_user, login_required\nfrom pluggy import HookimplMarker\n\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "LOW",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "fae1813c61b6c4fd",
+            "scanFileHash": "37c2dc1e3a4a2fac"
+          },
+          "ruleId": "flask-misconfiguration-controls",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `PREFERRED_URL_SCHEME` not set to the recommended value `https` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "from flask import Blueprint, request\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/api/api.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "from flask import Blueprint, request\nfrom flask_restplus import Api\nfrom pluggy import HookimplMarker\n\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "aabfcb39ecac5db3",
+            "scanFileHash": "99c8538cff9822af"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `SESSION_COOKIE_SECURE` not set to the recommended value `True` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "from flask import Blueprint, request\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/api/api.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "from flask import Blueprint, request\nfrom flask_restplus import Api\nfrom pluggy import HookimplMarker\n\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "aabfcb39ecac5db3",
+            "scanFileHash": "99c8538cff9822af"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Consider adding Flask-Security and Flask-Talisman security extensions to your Flask apps."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "from flask import Blueprint, request\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/api/api.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "from flask import Blueprint, request\nfrom flask_restplus import Api\nfrom pluggy import HookimplMarker\n\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "LOW",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "aabfcb39ecac5db3",
+            "scanFileHash": "99c8538cff9822af"
+          },
+          "ruleId": "flask-misconfiguration-controls",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `PREFERRED_URL_SCHEME` not set to the recommended value `https` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/account/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n\"\"\"User views.\"\"\"\nfrom flask import Blueprint, render_template, request, flash, redirect, url_for\nfrom flask_login import login_required, current_user, login_user, logout_user\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "caf386d407b83573",
+            "scanFileHash": "bd6d4572ca519ce6"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Security Misconfiguration with the config `SESSION_COOKIE_SECURE` not set to the recommended value `True` for production use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/account/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n\"\"\"User views.\"\"\"\nfrom flask import Blueprint, render_template, request, flash, redirect, url_for\nfrom flask_login import login_required, current_user, login_user, logout_user\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "MEDIUM",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "caf386d407b83573",
+            "scanFileHash": "bd6d4572ca519ce6"
+          },
+          "ruleId": "flask-misconfiguration-recommended",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Consider adding Flask-Security and Flask-Talisman security extensions to your Flask apps."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/account/views.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n\"\"\"User views.\"\"\"\nfrom flask import Blueprint, render_template, request, flash, redirect, url_for\nfrom flask_login import login_required, current_user, login_user, logout_user\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "LOW",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "caf386d407b83573",
+            "scanFileHash": "bd6d4572ca519ce6"
+          },
+          "ruleId": "flask-misconfiguration-controls",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Consider adding Flask-Security and Flask-Talisman security extensions to your Flask apps."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/app.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "# -*- coding: utf-8 -*-\n\"\"\"The app module, containing the app factory function.\"\"\"\nimport sys\n\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "LOW",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "caf386d407b83573",
+            "scanFileHash": "249b1cb0f0a1a243"
+          },
+          "ruleId": "flask-misconfiguration-controls",
+          "ruleIndex": 3
+        }
+      ],
+      "automationDetails": {
+        "description": {
+          "text": "Static Analysis Security Test results using @ShiftLeft/sast-scan"
+        },
+        "guid": "c0c46f60-2b3f-473c-90bd-d789a983adf1"
+      },
+      "versionControlProvenance": [
+        {
+          "branch": "dev",
+          "repositoryUri": "https://github.com/wahaj123/flask_kubernetes",
+          "revisionId": "b789bf84887e23050f976d20950e48ec15c48842"
+        }
+      ]
+    }
+  ],
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "inlineExternalProperties": [
+    {
+      "guid": "c0c46f60-2b3f-473c-90bd-d789a983adf1",
+      "runGuid": "90418c29-c35f-4ab5-9668-8729879a6bf1"
+    }
+  ]
+}

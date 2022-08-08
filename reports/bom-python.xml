@@ -1,0 +1,1244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.4" serialNumber="urn:uuid:04023075-7438-4cde-b882-a7765842952d" version="1">
+  <metadata>
+    <timestamp>2022-04-18T09:03:36.742Z</timestamp>
+    <tools>
+      <tool>
+        <vendor>AppThreat</vendor>
+        <name>cdxgen</name>
+        <version>4.0.10</version>
+      </tool>
+    </tools>
+    <authors>
+      <author>
+        <name>Team AppThreat</name>
+        <email>cloud@appthreat.com</email>
+      </author>
+    </authors>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="pkg:pypi/alembic@1.4.0">
+      <group/>
+      <name>alembic</name>
+      <version>1.4.0</version>
+      <description><![CDATA[A database migration tool for SQLAlchemy.]]></description>
+      <hashes>
+        <hash alg="SHA-256">2df2519a5b002f881517693b95626905a39c5faf4b5a1f94de4f1441095d1d26</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/alembic@1.4.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://alembic.sqlalchemy.org</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/aniso8601@8.0.0">
+      <group/>
+      <name>aniso8601</name>
+      <version>8.0.0</version>
+      <description><![CDATA[A library for parsing ISO 8601 strings.]]></description>
+      <hashes>
+        <hash alg="SHA-256">c033f63d028b9a58e3ab0c2c7d0532ab4bfa7452bfc788fbfe3ddabd327b181a</hash>
+      </hashes>
+      <licenses/>
+      <purl>pkg:pypi/aniso8601@8.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://bitbucket.org/nielsenb/aniso8601</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/arrow@0.15.5">
+      <group/>
+      <name>arrow</name>
+      <version>0.15.5</version>
+      <description><![CDATA[Better dates & times for Python]]></description>
+      <hashes>
+        <hash alg="SHA-256">70729bcc831da496ca3cb4b7e89472c8e2d27d398908155e0796179f6d2d41ee</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://opensource.org/licenses/Apache-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/arrow@0.15.5</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://arrow.readthedocs.io</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/attrs@19.3.0">
+      <group/>
+      <name>attrs</name>
+      <version>19.3.0</version>
+      <description><![CDATA[Classes Without Boilerplate]]></description>
+      <hashes>
+        <hash alg="SHA-256">08a96c641c3a74e44eb59afb61a24f2cb9f4d7188748e76ba4bb5edfa3cb7d1c</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/attrs@19.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://www.attrs.org/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/bcrypt@3.1.7">
+      <group/>
+      <name>bcrypt</name>
+      <version>3.1.7</version>
+      <description><![CDATA[Modern password hashing for your software and your servers]]></description>
+      <hashes>
+        <hash alg="SHA-256">d7bdc26475679dd073ba0ed2766445bb5b20ca4793ca0db32b399dccc6bc84b7</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://opensource.org/licenses/Apache-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/bcrypt@3.1.7</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/pyca/bcrypt/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/blinker@1.4">
+      <group/>
+      <name>blinker</name>
+      <version>1.4</version>
+      <description><![CDATA[Fast, simple object-to-object and broadcast signaling]]></description>
+      <hashes>
+        <hash alg="SHA-256">471aee25f3992bd325afa3772f1063dbdbbca947a041b8b89466dc00d606f8b6</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/blinker@1.4</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://pythonhosted.org/blinker/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/bootstrap-flask@1.2.0">
+      <group/>
+      <name>Bootstrap-Flask</name>
+      <version>1.2.0</version>
+      <description><![CDATA[Bootstrap 4 & 5 helper for your Flask projects.]]></description>
+      <hashes>
+        <hash alg="SHA-256">ed817e82acadac4c8b3fc2d1a310325b6ed395d13b0f6ca9d14e1742f880e685</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/bootstrap-flask@1.2.0</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/greyli/bootstrap-flask</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/certifi@2019.11.28">
+      <group/>
+      <name>certifi</name>
+      <version>2019.11.28</version>
+      <description><![CDATA[Python package for providing Mozilla's CA Bundle.]]></description>
+      <hashes>
+        <hash alg="SHA-256">017c25db2a153ce562900032d5bc68e9f191e44e9a0f762f373977de9df1fbb3</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MPL-2.0</id>
+          <url>https://opensource.org/licenses/MPL-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/certifi@2019.11.28</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://certifiio.readthedocs.io/en/latest/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/cffi@1.13.2">
+      <group/>
+      <name>cffi</name>
+      <version>1.13.2</version>
+      <description><![CDATA[Foreign Function Interface for Python calling C code.]]></description>
+      <hashes>
+        <hash alg="SHA-256">3c9fff570f13480b201e9ab69453108f6d98244a7f495e91b6c654a47486ba43</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/cffi@1.13.2</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://cffi.readthedocs.org</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/chardet@3.0.4">
+      <group/>
+      <name>chardet</name>
+      <version>3.0.4</version>
+      <description><![CDATA[Universal encoding detector for Python 2 and 3]]></description>
+      <hashes>
+        <hash alg="SHA-256">fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <name>LGPL</name>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/chardet@3.0.4</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/chardet/chardet</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/click@7.0">
+      <group/>
+      <name>Click</name>
+      <version>7.0</version>
+      <description><![CDATA[Composable command line interface toolkit]]></description>
+      <hashes>
+        <hash alg="SHA-256">2335065e6395b9e67ca716de5f7526736bfa6ceead690adf616d925bdc622b13</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+          <url>https://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/click@7.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://palletsprojects.com/p/click/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/cryptography@2.8">
+      <group/>
+      <name>cryptography</name>
+      <version>2.8</version>
+      <description><![CDATA[cryptography is a package which provides cryptographic recipes and primitives to Python developers.]]></description>
+      <hashes>
+        <hash alg="SHA-256">fb81c17e0ebe3358486cd8cc3ad78adbae58af12fc2bf2bc0bb84e8090fa5ce8</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://opensource.org/licenses/Apache-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/cryptography@2.8</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/pyca/cryptography</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/dominate@2.4.0">
+      <group/>
+      <name>dominate</name>
+      <version>2.4.0</version>
+      <description><![CDATA[Dominate is a Python library for creating and manipulating HTML documents using an elegant DOM API.]]></description>
+      <hashes>
+        <hash alg="SHA-256">6e833aea505f0236a9fc692326bac575f8bd38ae0f3a1bdc73d20ca606ac75d5</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <name>LGPLv3</name>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/dominate@2.4.0</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/Knio/dominate/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/elasticsearch@7.10.0">
+      <group/>
+      <name>elasticsearch</name>
+      <version>7.10.0</version>
+      <description><![CDATA[Python client for Elasticsearch]]></description>
+      <hashes>
+        <hash alg="SHA-256">9a21bfa7dc6a0b0dc142088bd653d8ce5ab284b4f7a3ded716185adf5276a7fe</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://opensource.org/licenses/Apache-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/elasticsearch@7.10.0</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/elastic/elasticsearch-py</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/elasticsearch-dsl@7.1.0">
+      <group/>
+      <name>elasticsearch-dsl</name>
+      <version>7.1.0</version>
+      <description><![CDATA[Python client for Elasticsearch]]></description>
+      <hashes>
+        <hash alg="SHA-256">3e3a5dbec143b8142c3db3710610306fc6294ba0d7a14403694b2dbc2d3ed641</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://opensource.org/licenses/Apache-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/elasticsearch-dsl@7.1.0</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/elasticsearch/elasticsearch-dsl-py</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/faker@4.0.0">
+      <group/>
+      <name>Faker</name>
+      <version>4.0.0</version>
+      <description><![CDATA[Faker is a Python package that generates fake data for you.]]></description>
+      <hashes>
+        <hash alg="SHA-256">047d4d1791bfb3756264da670d99df13d799bb36e7d88774b1585a82d05dbaec</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/faker@4.0.0</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/joke2k/faker</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/flask@1.1.1">
+      <group/>
+      <name>Flask</name>
+      <version>1.1.1</version>
+      <description><![CDATA[A simple framework for building complex web applications.]]></description>
+      <hashes>
+        <hash alg="SHA-256">45eb5a6fd193d6cf7e0cf5d8a5b31f83d5faae0293695626f539a823e93b13f6</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+          <url>https://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/flask@1.1.1</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://palletsprojects.com/p/flask</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/flask-bcrypt@0.7.1">
+      <group/>
+      <name>Flask-Bcrypt</name>
+      <version>0.7.1</version>
+      <description><![CDATA[Brcrypt hashing for Flask.]]></description>
+      <hashes>
+        <hash alg="SHA-256">d71c8585b2ee1c62024392ebdbc447438564e2c8c02b4e57b56a4cafd8d13c5f</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>0BSD</id>
+          <url>https://opensource.org/licenses/0BSD</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/flask-bcrypt@0.7.1</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/maxcountryman/flask-bcrypt</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/flask-debugtoolbar@0.10.1">
+      <group/>
+      <name>Flask-DebugToolbar</name>
+      <version>0.10.1</version>
+      <description><![CDATA[A toolbar overlay for debugging Flask applications.]]></description>
+      <hashes>
+        <hash alg="SHA-256">3d9657bc0c3633ace429e3ff451742bb59d1b7a7b95c9eb23a65ac9be2812959</hash>
+      </hashes>
+      <licenses/>
+      <purl>pkg:pypi/flask-debugtoolbar@0.10.1</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/flask-debugtoolbar/flask-debugtoolbar</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/flask-login@0.4.1">
+      <group/>
+      <name>Flask-Login</name>
+      <version>0.4.1</version>
+      <description><![CDATA[User authentication and session management for Flask.]]></description>
+      <hashes>
+        <hash alg="SHA-256">c815c1ac7b3e35e2081685e389a665f2c74d7e077cb93cecabaea352da4752ec</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/flask-login@0.4.1</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/maxcountryman/flask-login</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/flask-migrate@2.5.2">
+      <group/>
+      <name>Flask-Migrate</name>
+      <version>2.5.2</version>
+      <description><![CDATA[SQLAlchemy database migrations for Flask applications using Alembic.]]></description>
+      <hashes>
+        <hash alg="SHA-256">6fb038be63d4c60727d5dfa5f581a6189af5b4e2925bc378697b4f0a40cfb4e1</hash>
+      </hashes>
+      <licenses/>
+      <purl>pkg:pypi/flask-migrate@2.5.2</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/miguelgrinberg/flask-migrate</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/flask-restplus@0.13.0">
+      <group/>
+      <name>flask-restplus</name>
+      <version>0.13.0</version>
+      <description><![CDATA[Fully featured framework for fast, easy and documented API development with Flask]]></description>
+      <hashes>
+        <hash alg="SHA-256">a15d251923a8feb09a5d805c2f4d188555910a42c64d58f7dd281b8cac095f1b</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+          <url>https://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/flask-restplus@0.13.0</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/noirbizarre/flask-restplus</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/flask-sqlalchemy@2.4.1">
+      <group/>
+      <name>Flask-SQLAlchemy</name>
+      <version>2.4.1</version>
+      <description><![CDATA[Adds SQLAlchemy support to your Flask application.]]></description>
+      <hashes>
+        <hash alg="SHA-256">0078d8663330dc05a74bc72b3b6ddc441b9a744e2f56fe60af1a5bfc81334327</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+          <url>https://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/flask-sqlalchemy@2.4.1</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/pallets/flask-sqlalchemy</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/flask-wtf@0.14.2">
+      <group/>
+      <name>Flask-WTF</name>
+      <version>0.14.2</version>
+      <description><![CDATA[Form rendering, validation, and CSRF protection for Flask with WTForms.]]></description>
+      <hashes>
+        <hash alg="SHA-256">d9a9e366b32dcbb98ef17228e76be15702cd2600675668bca23f63a7947fd5ac</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+          <url>https://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/flask-wtf@0.14.2</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/wtforms/flask-wtf/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/idna@2.8">
+      <group/>
+      <name>idna</name>
+      <version>2.8</version>
+      <description><![CDATA[Internationalized Domain Names in Applications (IDNA)]]></description>
+      <hashes>
+        <hash alg="SHA-256">ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+          <url>https://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/idna@2.8</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/kjd/idna</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/importlib-metadata@1.5.0">
+      <group/>
+      <name>importlib-metadata</name>
+      <version>1.5.0</version>
+      <description><![CDATA[Read metadata from Python packages]]></description>
+      <hashes>
+        <hash alg="SHA-256">b97607a1a18a5100839aec1dc26a1ea17ee0d93b20b0f008d80a5a050afb200b</hash>
+      </hashes>
+      <licenses/>
+      <purl>pkg:pypi/importlib-metadata@1.5.0</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/python/importlib_metadata</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/itsdangerous@1.1.0">
+      <group/>
+      <name>itsdangerous</name>
+      <version>1.1.0</version>
+      <description><![CDATA[Safely pass data to untrusted environments and back.]]></description>
+      <hashes>
+        <hash alg="SHA-256">b12271b2047cb23eeb98c8b5622e2e5c5e9abd9784a153e9d8ef9cb4dd09d749</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+          <url>https://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/itsdangerous@1.1.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://palletsprojects.com/p/itsdangerous/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/jinja2@2.11.1">
+      <group/>
+      <name>Jinja2</name>
+      <version>2.11.1</version>
+      <description><![CDATA[A very fast and expressive template engine.]]></description>
+      <hashes>
+        <hash alg="SHA-256">b0eaf100007721b5c16c1fc1eecb87409464edc10469ddc9a22a27a99123be49</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+          <url>https://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/jinja2@2.11.1</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://palletsprojects.com/p/jinja/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/jsonschema@3.2.0">
+      <group/>
+      <name>jsonschema</name>
+      <version>3.2.0</version>
+      <description><![CDATA[An implementation of JSON Schema validation for Python]]></description>
+      <hashes>
+        <hash alg="SHA-256">4e5b3cf8216f577bee9ce139cbe72eca3ea4f292ec60928ff24758ce626cd163</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/jsonschema@3.2.0</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/Julian/jsonschema</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/libgravatar@0.2.3">
+      <group/>
+      <name>libgravatar</name>
+      <version>0.2.3</version>
+      <description><![CDATA[A library that provides a Python 3 interface for the Gravatar API.]]></description>
+      <hashes>
+        <hash alg="SHA-256">672116492aa483c957069ee2b3d130780fef2f5d49b2a3f8e16561bb2aa1c0db</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <name>GNU General Public License v3 (GPLv3)</name>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/libgravatar@0.2.3</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/pabluk/libgravatar</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/mako@1.1.1">
+      <group/>
+      <name>Mako</name>
+      <version>1.1.1</version>
+      <description><![CDATA[A super-fast templating language that borrows the best ideas from the existing templating languages.]]></description>
+      <hashes>
+        <hash alg="SHA-256">2984a6733e1d472796ceef37ad48c26f4a984bb18119bb2dbc37a44d8f6e75a4</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/mako@1.1.1</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://www.makotemplates.org/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/markupsafe@1.1.1">
+      <group/>
+      <name>MarkupSafe</name>
+      <version>1.1.1</version>
+      <description><![CDATA[Safely add untrusted strings to HTML/XML markup.]]></description>
+      <hashes>
+        <hash alg="SHA-256">09027a7803a62ca78792ad89403b1b7a73a01c8cb65909cd876f7fcebd79b161</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+          <url>https://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/markupsafe@1.1.1</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://palletsprojects.com/p/markupsafe/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/phonenumbers@8.11.3">
+      <group/>
+      <name>phonenumbers</name>
+      <version>8.11.3</version>
+      <description><![CDATA[Python version of Google's common library for parsing, formatting, storing and validating international phone numbers.]]></description>
+      <hashes>
+        <hash alg="SHA-256">a4a3016c39ca058a0c953eb58cbb8138d8c75472e018f6a2554255049e22679e</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://opensource.org/licenses/Apache-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/phonenumbers@8.11.3</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/daviddrysdale/python-phonenumbers</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/pluggy@0.13.1">
+      <group/>
+      <name>pluggy</name>
+      <version>0.13.1</version>
+      <description><![CDATA[plugin and hook calling mechanisms for python]]></description>
+      <hashes>
+        <hash alg="SHA-256">966c145cd83c96502c3c3868f50408687b38434af77734af1e9ca461a4081d2d</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/pluggy@0.13.1</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/pytest-dev/pluggy</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/pycparser@2.19">
+      <group/>
+      <name>pycparser</name>
+      <version>2.19</version>
+      <description><![CDATA[C parser in Python]]></description>
+      <hashes>
+        <hash alg="SHA-256">a988718abfad80b6b157acce7bf130a30876d27603738ac39f140993246b25b3</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>0BSD</id>
+          <url>https://opensource.org/licenses/0BSD</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/pycparser@2.19</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/eliben/pycparser</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/pycryptodomex@3.9.4">
+      <group/>
+      <name>pycryptodomex</name>
+      <version>3.9.4</version>
+      <description><![CDATA[Cryptographic library for Python]]></description>
+      <hashes>
+        <hash alg="SHA-256">17a09e38fdc91e4857cf5a7ce82f3c0b229c3977490f2146513e366923fc256b</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <name>BSD, Public Domain</name>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/pycryptodomex@3.9.4</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://www.pycryptodome.org</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/pymysql@0.9.3">
+      <group/>
+      <name>PyMySQL</name>
+      <version>0.9.3</version>
+      <description><![CDATA[Pure Python MySQL Driver]]></description>
+      <hashes>
+        <hash alg="SHA-256">3943fbbbc1e902f41daf7f9165519f140c4451c179380677e6a848587042561a</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <name>"MIT"</name>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/pymysql@0.9.3</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/PyMySQL/PyMySQL/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/pyopenssl@19.1.0">
+      <group/>
+      <name>pyOpenSSL</name>
+      <version>19.1.0</version>
+      <description><![CDATA[Python wrapper module around the OpenSSL library]]></description>
+      <hashes>
+        <hash alg="SHA-256">621880965a720b8ece2f1b2f54ea2071966ab00e2970ad2ce11d596102063504</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://opensource.org/licenses/Apache-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/pyopenssl@19.1.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://pyopenssl.org/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/pyrsistent@0.15.7">
+      <group/>
+      <name>pyrsistent</name>
+      <version>0.15.7</version>
+      <description><![CDATA[Persistent/Functional/Immutable data structures]]></description>
+      <hashes>
+        <hash alg="SHA-256">cdc7b5e3ed77bed61270a47d35434a30617b9becdf2478af76ad2c6ade307280</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/pyrsistent@0.15.7</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>http://github.com/tobgu/pyrsistent/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/python-alipay-sdk@2.0.1">
+      <group/>
+      <name>python-alipay-sdk</name>
+      <version>2.0.1</version>
+      <description><![CDATA[Python SDK for AliPay, RSA is the only sign method we support]]></description>
+      <hashes>
+        <hash alg="SHA-256">22511dcbc237d8531b8c3660533ecdcc5807204389e9c0980202034abf304a35</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>0BSD</id>
+          <url>https://opensource.org/licenses/0BSD</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/python-alipay-sdk@2.0.1</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/fzlee/alipay</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/python-dateutil@2.8.1">
+      <group/>
+      <name>python-dateutil</name>
+      <version>2.8.1</version>
+      <description><![CDATA[Extensions to the standard Python datetime module]]></description>
+      <hashes>
+        <hash alg="SHA-256">75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <name>Dual License</name>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/python-dateutil@2.8.1</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/dateutil/dateutil</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/python-dotenv@0.10.5">
+      <group/>
+      <name>python-dotenv</name>
+      <version>0.10.5</version>
+      <description><![CDATA[Read key-value pairs from a .env file and set them as environment variables]]></description>
+      <hashes>
+        <hash alg="SHA-256">440c7c23d53b7d352f9c94d6f70860242c2f071cf5c029dd661ccb22d64ae42b</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+          <url>https://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/python-dotenv@0.10.5</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/theskumar/python-dotenv</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/python-editor@1.0.4">
+      <group/>
+      <name>python-editor</name>
+      <version>1.0.4</version>
+      <description><![CDATA[Programmatically open an editor, capture the result.]]></description>
+      <hashes>
+        <hash alg="SHA-256">ea87e17f6ec459e780e4221f295411462e0d0810858e055fc514684350a2f522</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <name>Apache</name>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/python-editor@1.0.4</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/fmoo/python-editor</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/pytz@2019.3">
+      <group/>
+      <name>pytz</name>
+      <version>2019.3</version>
+      <description><![CDATA[World timezone definitions, modern and historical]]></description>
+      <hashes>
+        <hash alg="SHA-256">1c557d7d0e871de1f5ccd5833f60fb2550652da6be2693c1e02300743d21500d</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/pytz@2019.3</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://pythonhosted.org/pytz</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/redis@3.4.1">
+      <group/>
+      <name>redis</name>
+      <version>3.4.1</version>
+      <description><![CDATA[Python client for Redis database and key-value store]]></description>
+      <hashes>
+        <hash alg="SHA-256">b205cffd05ebfd0a468db74f0eedbff8df1a7bfc47521516ade4692991bb0833</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/redis@3.4.1</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/redis/redis-py</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/requests@2.22.0">
+      <group/>
+      <name>requests</name>
+      <version>2.22.0</version>
+      <description><![CDATA[Python HTTP for Humans.]]></description>
+      <hashes>
+        <hash alg="SHA-256">9cf5292fcd0f598c671cfc1e0d7d1a7f13bb8085e9a590f48c010551dc6c4b31</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://opensource.org/licenses/Apache-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/requests@2.22.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://requests.readthedocs.io</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/six@1.14.0">
+      <group/>
+      <name>six</name>
+      <version>1.14.0</version>
+      <description><![CDATA[Python 2 and 3 compatibility utilities]]></description>
+      <hashes>
+        <hash alg="SHA-256">8f3cd2e254d8f793e7f3d6d9df77b92252b52637291d0f0da013c76ea2724b6c</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/six@1.14.0</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/benjaminp/six</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/sqlalchemy@1.3.13">
+      <group/>
+      <name>SQLAlchemy</name>
+      <version>1.3.13</version>
+      <description><![CDATA[Database Abstraction Library]]></description>
+      <hashes>
+        <hash alg="SHA-256">64a7b71846db6423807e96820993fa12a03b89127d278290ca25c0b11ed7b4fb</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/sqlalchemy@1.3.13</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://www.sqlalchemy.org</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/text-unidecode@1.3">
+      <group/>
+      <name>text-unidecode</name>
+      <version>1.3</version>
+      <description><![CDATA[The most basic Text::Unidecode port]]></description>
+      <hashes>
+        <hash alg="SHA-256">1311f10e8b895935241623731c2ba64f4c455287888b18189350b67134a822e8</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <name>Artistic License</name>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/text-unidecode@1.3</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/kmike/text-unidecode/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/urllib3@1.25.8">
+      <group/>
+      <name>urllib3</name>
+      <version>1.25.8</version>
+      <description><![CDATA[HTTP library with thread-safe connection pooling, file post, and more.]]></description>
+      <hashes>
+        <hash alg="SHA-256">2f3db8b19923a873b3e5256dc9c2dedfa883e33d87c690d9c7913e1f40673cdc</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/urllib3@1.25.8</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://urllib3.readthedocs.io/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/visitor@0.1.3">
+      <group/>
+      <name>visitor</name>
+      <version>0.1.3</version>
+      <description><![CDATA[A tiny pythonic visitor implementation.]]></description>
+      <hashes>
+        <hash alg="SHA-256">2c737903b2b6864ebc6167eef7cf3b997126f1aa94bdf590f90f1436d23e480a</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/visitor@0.1.3</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>http://github.com/mbr/visitor</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/werkzeug@0.16.1">
+      <group/>
+      <name>Werkzeug</name>
+      <version>0.16.1</version>
+      <description><![CDATA[The comprehensive WSGI web application library.]]></description>
+      <hashes>
+        <hash alg="SHA-256">1e0dedc2acb1f46827daa2e399c1485c8fa17c0d8e70b6b875b4e7f54bf408d2</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+          <url>https://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/werkzeug@0.16.1</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://palletsprojects.com/p/werkzeug/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/wtforms@2.2.1">
+      <group/>
+      <name>WTForms</name>
+      <version>2.2.1</version>
+      <description><![CDATA[Form validation and rendering for Python web development.]]></description>
+      <hashes>
+        <hash alg="SHA-256">e3ee092c827582c50877cdbd49e9ce6d2c5c1f6561f849b3b068c1b8029626f1</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+          <url>https://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/wtforms@2.2.1</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://wtforms.readthedocs.io/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/zipp@2.1.0">
+      <group/>
+      <name>zipp</name>
+      <version>2.1.0</version>
+      <description><![CDATA[Backport of pathlib-compatible object wrapper for zip files]]></description>
+      <hashes>
+        <hash alg="SHA-256">ccc94ed0909b58ffe34430ea5451f07bc0c76467d7081619a454bf5c98b89e28</hash>
+      </hashes>
+      <licenses/>
+      <purl>pkg:pypi/zipp@2.1.0</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/jaraco/zipp</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/-e ./plugin-example">
+      <group/>
+      <name>-e ./plugin_example</name>
+      <description/>
+      <licenses/>
+      <purl>pkg:pypi/-e ./plugin-example</purl>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/requests@2.27.1">
+      <group/>
+      <name>requests</name>
+      <version>2.27.1</version>
+      <description><![CDATA[Python HTTP for Humans.]]></description>
+      <hashes>
+        <hash alg="SHA-256">f22fa1e554c9ddfd16e6e41ac79759e17be9e492b3587efa038054674760e72d</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://opensource.org/licenses/Apache-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/requests@2.27.1</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://requests.readthedocs.io</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/gevent@21.12.0">
+      <group/>
+      <name>gevent</name>
+      <version>21.12.0</version>
+      <description><![CDATA[Coroutine-based network library]]></description>
+      <hashes>
+        <hash alg="SHA-256">2afa3f3ad528155433f6ac8bd64fa5cc303855b97004416ec719a6b1ca179481</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/gevent@21.12.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://www.gevent.org/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/locust@2.8.6">
+      <group/>
+      <name>locust</name>
+      <version>2.8.6</version>
+      <description><![CDATA[Developer friendly load testing framework]]></description>
+      <hashes>
+        <hash alg="SHA-256">30dd8be2b9518ec06f4f18e061b2b625851faccadc70ffbc146b38f9b377b3d3</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/locust@2.8.6</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://locust.io/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/pytest-needle@0.3.11">
+      <group/>
+      <name>pytest-needle</name>
+      <version>0.3.11</version>
+      <description><![CDATA[pytest plugin for visual testing websites using selenium]]></description>
+      <hashes>
+        <hash alg="SHA-256">a8144bdf86393efec68d4f6e0a89f61e33b340359c19a26e76daa5c094a1f6f7</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/pytest-needle@0.3.11</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>https://github.com/jlane9/pytest-needle</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:pypi/selenium@4.1.3">
+      <group/>
+      <name>selenium</name>
+      <version>4.1.3</version>
+      <description/>
+      <hashes>
+        <hash alg="SHA-256">14d28a628c831c105d38305c881c9c7847199bfd728ec84240c5e86fa1c9bd5a</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://opensource.org/licenses/Apache-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/selenium@4.1.3</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://www.selenium.dev</url>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+  <externalReferences>
+    <reference type="other">
+      <url>/app</url>
+      <comment>Base path</comment>
+    </reference>
+    <reference type="other">
+      <url>/app/requirements.txt, /app/test/requirements.txt</url>
+      <comment>Package file</comment>
+    </reference>
+  </externalReferences>
+</bom>

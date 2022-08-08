@@ -1,0 +1,594 @@
+{
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Secrets Audit",
+          "rules": [
+            {
+              "id": "CWE-312",
+              "help": {
+                "text": "The application stores sensitive information in cleartext within a resource that might be accessible to another control sphere.\nBecause the information is stored in cleartext, attackers could potentially read it. Even if the information is encoded in a way that is not human-readable, certain techniques could determine which encoding is being used, then decode the information.",
+                "markdown": "The application stores sensitive information in cleartext within a resource that might be accessible to another control sphere.\nBecause the information is stored in cleartext, attackers could potentially read it. Even if the information is encoded in a way that is not human-readable, certain techniques could determine which encoding is being used, then decode the information."
+              },
+              "name": "Env Var",
+              "properties": {
+                "tags": [
+                  "Scan"
+                ],
+                "precision": "very-high"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "fullDescription": {
+                "text": "The application stores sensitive information in cleartext within a resource that might be accessible to another control sphere."
+              },
+              "helpUri": "https://cwe.mitre.org/data/definitions/312.html",
+              "shortDescription": {
+                "text": "Cleartext Storage of Sensitive Information."
+              }
+            }
+          ],
+          "version": "1.0.0-scan",
+          "fullName": "Secrets Audit"
+        }
+      },
+      "conversion": {
+        "tool": {
+          "driver": {
+            "name": "@ShiftLeft/sast-scan"
+          }
+        },
+        "invocation": {
+          "arguments": [
+            "--config-path=/usr/local/src/lib/../credscan-config.toml",
+            "--path=/app",
+            "--leaks-exit-code=0",
+            "--no-git",
+            "--report=/app/reports/credscan-report.json"
+          ],
+          "executionSuccessful": true,
+          "commandLine": "--config-path=/usr/local/src/lib/../credscan-config.toml --path=/app --leaks-exit-code=0 --no-git --report=/app/reports/credscan-report.json",
+          "endTimeUtc": "2022-04-18T09:02:47Z",
+          "workingDirectory": {
+            "uri": "file:///home/wahaj/Desktop/flask_kubernetes"
+          }
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "endTimeUtc": "2022-04-18T09:02:47Z",
+          "workingDirectory": {
+            "uri": "file:///home/wahaj/Desktop/flask_kubernetes"
+          }
+        }
+      ],
+      "properties": {
+        "metrics": {
+          "total": 12,
+          "critical": 0,
+          "high": 12,
+          "medium": 0,
+          "low": 0
+        }
+      },
+      "results": [
+        {
+          "message": {
+            "markdown": "",
+            "text": "Credential in plaintext?\n\nRule: Env Var\nLine:                   <elementProp name=\"password\" elementType=\"HTTPArgument\">\n\nCommit: ."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "                  <elementProp name=\"password\" elementType=\"HTTPArgument\">"
+                  },
+                  "startLine": 118
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/Backend_Script/Ecommerce.jmx"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "                  <elementProp name=\"password\" elementType=\"HTTPArgument\">"
+                  },
+                  "endLine": 118,
+                  "startLine": 118
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "da69051478a0de34",
+            "scanFileHash": "0c1fd5c8c431add2"
+          },
+          "ruleId": "CWE-312",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Credential in plaintext?\n\nRule: Env Var\nLine:                   <elementProp name=\"password\" elementType=\"HTTPArgument\">\n\nCommit: ."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "                  <elementProp name=\"password\" elementType=\"HTTPArgument\">"
+                  },
+                  "startLine": 118
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/Backend_Script/Ecommerce.jmx"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "                  <elementProp name=\"password\" elementType=\"HTTPArgument\">"
+                  },
+                  "endLine": 118,
+                  "startLine": 118
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "da69051478a0de34",
+            "scanFileHash": "0c1fd5c8c431add2"
+          },
+          "ruleId": "CWE-312",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Credential in plaintext?\n\nRule: Env Var\nLine:                 <td width=\"20%\">Other information</td><td width=\"80%\"><p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF] was found in the following HTML form: [Form 4: \"id_quantity\" ].</p></td>\n\nCommit: ."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "                <td width=\"20%\">Other information</td><td width=\"80%\"><p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF] was found in the following HTML form: [Form 4: \"id_quantity\" ].</p></td>"
+                  },
+                  "startLine": 1018
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/baseline-report.html"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "                <td width=\"20%\">Other information</td><td width=\"80%\"><p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF] was found in the following HTML form: [Form 4: \"id_quantity\" ].</p></td>"
+                  },
+                  "endLine": 1018,
+                  "startLine": 1018
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "05d78b040c3b3402",
+            "scanFileHash": "8531c6acc6cebed2"
+          },
+          "ruleId": "CWE-312",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Credential in plaintext?\n\nRule: High Entropy\nLine: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzSPx8HUHo2pWyhuGIKsQziaBSSEBzjgBSjIn/DU4+PsSxdw0i0TJcMS7/SRs1DgaQM6mw+JdLhQXVqqwqsq2IfD8R9vmsjnXONvMhqQpZJY0hsgoGXvA2290R2RdGZtR6bWf57jpOz3LeUYxUqLCCxr5nUJaUBIGC+0K/9M9GH0bdPytg8sJza3OgWYE4XUokQlHVatWmSUUWeo8xX1TKV17ZxdvVMGJ+3mhtanASfkY/wJFHyYtEiaFvqzmuBCgrsWu7q+K5ZJuvvdvicnrJl9bvm7CzWZHvbLM9O6aj7NK86fsFt48rFu3AT3mUuuDLvRHlEgfdp0MacdBRn6IfQIDAQAB\n\nCommit: ."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzSPx8HUHo2pWyhuGIKsQziaBSSEBzjgBSjIn/DU4+PsSxdw0i0TJcMS7/SRs1DgaQM6mw+JdLhQXVqqwqsq2IfD8R9vmsjnXONvMhqQpZJY0hsgoGXvA2290R2RdGZtR6bWf57jpOz3LeUYxUqLCCxr5nUJaUBIGC+0K/9M9GH0bdPytg8sJza3OgWYE4XUokQlHVatWmSUUWeo8xX1TKV17ZxdvVMGJ+3mhtanASfkY/wJFHyYtEiaFvqzmuBCgrsWu7q+K5ZJuvvdvicnrJl9bvm7CzWZHvbLM9O6aj7NK86fsFt48rFu3AT3mUuuDLvRHlEgfdp0MacdBRn6IfQIDAQAB"
+                  },
+                  "startLine": 2
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/order/payment/ali_public_key.pem"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzSPx8HUHo2pWyhuGIKsQziaBSSEBzjgBSjIn/DU4+PsSxdw0i0TJcMS7/SRs1DgaQM6mw+JdLhQXVqqwqsq2IfD8R9vmsjnXONvMhqQpZJY0hsgoGXvA2290R2RdGZtR6bWf57jpOz3LeUYxUqLCCxr5nUJaUBIGC+0K/9M9GH0bdPytg8sJza3OgWYE4XUokQlHVatWmSUUWeo8xX1TKV17ZxdvVMGJ+3mhtanASfkY/wJFHyYtEiaFvqzmuBCgrsWu7q+K5ZJuvvdvicnrJl9bvm7CzWZHvbLM9O6aj7NK86fsFt48rFu3AT3mUuuDLvRHlEgfdp0MacdBRn6IfQIDAQAB"
+                  },
+                  "endLine": 2,
+                  "startLine": 2
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "9d153896fe13804e",
+            "scanFileHash": "7eab8cf6344098bb"
+          },
+          "ruleId": "CWE-312",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Credential in plaintext?\n\nRule: RSA\nLine: -----BEGIN RSA PRIVATE KEY-----\n\nCommit: ."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "-----BEGIN RSA PRIVATE KEY-----"
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/order/payment/app_private_key.pem"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "-----BEGIN RSA PRIVATE KEY-----"
+                  },
+                  "endLine": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "430e0618de2b4a21",
+            "scanFileHash": "42810229c490ac49"
+          },
+          "ruleId": "CWE-312",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Credential in plaintext?\n\nRule: High Entropy\nLine: MIIEowIBAAKCAQEAsrOc1EI5RMd0VIhMuIOHAOOYKhWdtiIZrudRig5J4Gvs74hz\n\nCommit: ."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "MIIEowIBAAKCAQEAsrOc1EI5RMd0VIhMuIOHAOOYKhWdtiIZrudRig5J4Gvs74hz"
+                  },
+                  "startLine": 2
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/order/payment/app_private_key.pem"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "MIIEowIBAAKCAQEAsrOc1EI5RMd0VIhMuIOHAOOYKhWdtiIZrudRig5J4Gvs74hz"
+                  },
+                  "endLine": 2,
+                  "startLine": 2
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "557b2064cd4b65fc",
+            "scanFileHash": "42810229c490ac49"
+          },
+          "ruleId": "CWE-312",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Credential in plaintext?\n\nRule: High Entropy\nLine: yDkaA///xogcDy/iqEkccxwUtveIwDkUUXMNAvhQ9lSlZF38YaoCC2qlJB4yLr13\n\nCommit: ."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "yDkaA///xogcDy/iqEkccxwUtveIwDkUUXMNAvhQ9lSlZF38YaoCC2qlJB4yLr13"
+                  },
+                  "startLine": 3
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/order/payment/app_private_key.pem"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "yDkaA///xogcDy/iqEkccxwUtveIwDkUUXMNAvhQ9lSlZF38YaoCC2qlJB4yLr13"
+                  },
+                  "endLine": 3,
+                  "startLine": 3
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "18aeee0c41482e6f",
+            "scanFileHash": "42810229c490ac49"
+          },
+          "ruleId": "CWE-312",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Credential in plaintext?\n\nRule: High Entropy\nLine: T+BdfirEYiG6ZqdWKmZhU00rwoohjfweZbWEEsMjIbfzMmHQ1eMF8TPUjhloWqjM\n\nCommit: ."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "T+BdfirEYiG6ZqdWKmZhU00rwoohjfweZbWEEsMjIbfzMmHQ1eMF8TPUjhloWqjM"
+                  },
+                  "startLine": 4
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/order/payment/app_private_key.pem"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "T+BdfirEYiG6ZqdWKmZhU00rwoohjfweZbWEEsMjIbfzMmHQ1eMF8TPUjhloWqjM"
+                  },
+                  "endLine": 4,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "90a889fdeff70e78",
+            "scanFileHash": "42810229c490ac49"
+          },
+          "ruleId": "CWE-312",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Credential in plaintext?\n\nRule: High Entropy\nLine: YQsbPA91N3tjw99KG3mcAksNo0JGR9ztVfj5DQIDAQABAoIBAEHoYsAaSJroYSxI\n\nCommit: ."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "YQsbPA91N3tjw99KG3mcAksNo0JGR9ztVfj5DQIDAQABAoIBAEHoYsAaSJroYSxI"
+                  },
+                  "startLine": 7
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/order/payment/app_private_key.pem"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "YQsbPA91N3tjw99KG3mcAksNo0JGR9ztVfj5DQIDAQABAoIBAEHoYsAaSJroYSxI"
+                  },
+                  "endLine": 7,
+                  "startLine": 7
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "d471305f68784d59",
+            "scanFileHash": "42810229c490ac49"
+          },
+          "ruleId": "CWE-312",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Credential in plaintext?\n\nRule: High Entropy\nLine: qkdl2hd+rz0GsNHYl9OSWADVzjNJjHBNQqZY1x9g8PIrJTxPhYP5nCECgYEA1J5c\n\nCommit: ."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "qkdl2hd+rz0GsNHYl9OSWADVzjNJjHBNQqZY1x9g8PIrJTxPhYP5nCECgYEA1J5c"
+                  },
+                  "startLine": 15
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/order/payment/app_private_key.pem"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "qkdl2hd+rz0GsNHYl9OSWADVzjNJjHBNQqZY1x9g8PIrJTxPhYP5nCECgYEA1J5c"
+                  },
+                  "endLine": 15,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "15c1a6227eea9037",
+            "scanFileHash": "42810229c490ac49"
+          },
+          "ruleId": "CWE-312",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Credential in plaintext?\n\nRule: High Entropy\nLine: Agd0lZEuI/4bk51vvocnnYhCOBRPU6ocMEARPyThDQ24aQ2Uv8M1BYv1IcazbWbz\n\nCommit: ."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "Agd0lZEuI/4bk51vvocnnYhCOBRPU6ocMEARPyThDQ24aQ2Uv8M1BYv1IcazbWbz"
+                  },
+                  "startLine": 19
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/order/payment/app_private_key.pem"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "Agd0lZEuI/4bk51vvocnnYhCOBRPU6ocMEARPyThDQ24aQ2Uv8M1BYv1IcazbWbz"
+                  },
+                  "endLine": 19,
+                  "startLine": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "a8438af7e1c2dd4c",
+            "scanFileHash": "42810229c490ac49"
+          },
+          "ruleId": "CWE-312",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Credential in plaintext?\n\nRule: High Entropy\nLine: EsMjIbfzMmHQ1eMF8TPUjhloWqjMzsOhe9FPujmHanPF5uyXXBFxaGHvmBeo/Xkj\n\nCommit: ."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "EsMjIbfzMmHQ1eMF8TPUjhloWqjMzsOhe9FPujmHanPF5uyXXBFxaGHvmBeo/Xkj"
+                  },
+                  "startLine": 5
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/wahaj/Desktop/flask_kubernetes/flaskshop/order/payment/app_public_key.pem"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "EsMjIbfzMmHQ1eMF8TPUjhloWqjMzsOhe9FPujmHanPF5uyXXBFxaGHvmBeo/Xkj"
+                  },
+                  "endLine": 5,
+                  "startLine": 5
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "4caf1d6896081fb2",
+            "scanFileHash": "b4d1373368dade7e"
+          },
+          "ruleId": "CWE-312",
+          "ruleIndex": 0
+        }
+      ],
+      "automationDetails": {
+        "description": {
+          "text": "Static Analysis Security Test results using @ShiftLeft/sast-scan"
+        },
+        "guid": "e4a32e65-44db-4917-8589-b7adb8f9138a"
+      },
+      "versionControlProvenance": [
+        {
+          "branch": "dev",
+          "repositoryUri": "https://github.com/wahaj123/flask_kubernetes",
+          "revisionId": "b789bf84887e23050f976d20950e48ec15c48842"
+        }
+      ]
+    }
+  ],
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "inlineExternalProperties": [
+    {
+      "guid": "e4a32e65-44db-4917-8589-b7adb8f9138a",
+      "runGuid": "90418c29-c35f-4ab5-9668-8729879a6bf1"
+    }
+  ]
+}
