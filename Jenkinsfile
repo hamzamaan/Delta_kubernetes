@@ -60,6 +60,14 @@ pipeline{
             }
         }
 
+          stage('Building Docker image - DOCKER PLUGIN') { 
+            steps {
+                script {
+                    dockerImage = docker.build (registry + ":$BUILD_NUMBER", "./code") 
+                }           
+            }
+        }
+
 
 
     }
