@@ -8,7 +8,7 @@ pipeline{
             steps{
                 dir('source-code'){
                     git branch: branch,
-                    credentialsId: 'hamza.sajjad',
+                    credentialsId: 'ssh_git',
                     url: 'git@github.com:hamzamaan/Delta_kubernetes.git'
 
 
@@ -20,7 +20,7 @@ pipeline{
             steps{
                 dir('kubernetes-app'){
                     git branch: branch,
-                    credentialsId: 'hamza.sajjad',
+                    credentialsId: 'ssh_git',
                     url: 'git@github.com:hamzamaan/Kubernetes_app.git'
                 }
             }
