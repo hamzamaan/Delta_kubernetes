@@ -1,6 +1,9 @@
 pipeline{
     parameters{
         string(name: 'branch', defaultValue: 'dev', description: 'Enter the Name of branch')
+        string(name: 'registry', defaultValue: '191124798140.dkr.ecr.us-east-2.amazonaws.com', description: 'Enter the ARN of the registry')
+        string(name: 'registry_name', defaultValue: 'saelor-application', description: 'Enter the Name of the registry')
+        string(name: 'dockerImage', defaultValue: '191124798140.dkr.ecr.us-east-2.amazonaws.com', description: 'Enter the Name of the Docker Image')
     }
     agent any
     stages{
@@ -56,5 +59,8 @@ pipeline{
 
             }
         }
+
+
+
     }
 }
