@@ -73,7 +73,7 @@ pipeline{
                 script{
                     sh '''
                     trivy image -f json -o results.json --exit-code 0 --severity CRITICAL,HIGH  $registry:$BUILD_NUMBER
-                    curl -X POST "http://18.216.55.201:8080/api/v2/reimport-scan/" -H  "accept: application/json" -H  "Content-Type: multipart/form-data" -H  "Authorization: Token 494d5bcaf4cbadcb1f09df5f76f0a4389aaf5ad7" -F "minimum_severity=Info" -F "active=true" -F "verified=true" -F "scan_type=Trivy Scan" -F "push_to_jira=false" -F "close_old_findings=true" -F "file=@/home/new_home/workspace/AWS-EKS-Microservices-Test/code/results.json" -F "product_name=saelor" -F "scan_date=2022-06-14" -F "engagement_name=saelor-microservices-trivy-eg" -F "engagement=9"
+                    curl -X POST "http://18.216.55.201:8080/api/v2/import-scan/" -H  "accept: application/json" -H  "Content-Type: multipart/form-data" -H  "Authorization: Token 494d5bcaf4cbadcb1f09df5f76f0a4389aaf5ad7" -F "minimum_severity=Info" -F "active=true" -F "verified=true" -F "scan_type=Trivy Scan" -F "push_to_jira=false" -F "close_old_findings=true" -F "file=@/home/new_home/workspace/AWS-EKS-Microservices-Test/code/results.json" -F "product_name=saelor" -F "scan_date=2022-06-14" -F "engagement_name=saelor-microservices-trivy-eg" -F "engagement=9"
                     '''
                     //curl --location --request POST 'http://3.144.3.241:8080/api/v2/import-scan/' --header 'Authorization: Token d654dc00c584932942be6c064923543b996201fe' --form 'scan_type="Trivy Scan"' --form 'engagement="2"' --form 'file=@/home/new_home/workspace/AWS-EKS-Microservice/code/results.json'
                     //Create engagment
