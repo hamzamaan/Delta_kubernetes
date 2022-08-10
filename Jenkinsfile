@@ -83,6 +83,19 @@ pipeline{
             }
         }
 
+        
+        stage('Push Docker image to Registry - DOCKERHUB/ECR/ACR') { 
+            steps { 
+                script { 
+                    sh '''#!/bin/bash
+                    aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin $registry
+                    docker tag $registry:$BUILD_NUMBER $registry/$registry_name:$BUILD_NUMBER
+                    docker push $registry/$registry_name:$BUILD_NUMBER
+                    '''
+                } 
+            }
+        }
+
 
 
     }
