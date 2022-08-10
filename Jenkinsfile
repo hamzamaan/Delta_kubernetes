@@ -107,6 +107,13 @@ pipeline{
             }
         }
 
+        stage('Delete Local image locally') { 
+            steps { 
+                sh "docker rmi $registry:$BUILD_NUMBER"
+                sh "docker rmi $registry/$registry_name:$BUILD_NUMBER"
+            }
+        } 
+
 
 
     }
