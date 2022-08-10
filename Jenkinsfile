@@ -99,9 +99,9 @@ pipeline{
         stage('Update Kubernetes Repo to Trigger Argo CD ') { 
             steps { 
                 sshagent(['ssh_git']) {
-                    sh "cd kubernetes && git pull"
-                    sh "cd kubernetes  && git commit -am 'Publish new version' || echo 'no changes'"
-                    sh "cd kubernetes  && git push --set-upstream origin $branch"
+                    sh "cd kubernetes-app && git pull"
+                    sh "cd kubernetes-app  && git commit -am 'Publish new version' || echo 'no changes'"
+                    sh "cd kubernetes-app  && git push --set-upstream origin $branch"
                     echo "$registry/$registry_name:$BUILD_NUMBER"
                 }
             }
